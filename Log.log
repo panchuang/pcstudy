@@ -1,0 +1,38 @@
+2019-08-22 14:07:49,197 - INFO - error!
+2019-08-22 14:07:49,197 - INFO - ======ERROR:unsupported operand type(s) for +: 'int' and 'str'
+2019-08-22 14:07:49,197 - ERROR - (<type 'exceptions.TypeError'>, TypeError("unsupported operand type(s) for +: 'int' and 'str'",), <traceback object at 0x107079ef0>)
+Traceback (most recent call last):
+  File "/Users/zhang/Desktop/test/other_test.py", line 180, in <module>
+    a = 1 + '1'
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2019-08-22 14:07:49,198 - INFO - 
+
+
+2019-08-22 14:07:50,419 - INFO - error!
+2019-08-22 14:07:50,420 - INFO - ======ERROR:unsupported operand type(s) for +: 'int' and 'str'
+2019-08-22 14:07:50,420 - ERROR - (<type 'exceptions.TypeError'>, TypeError("unsupported operand type(s) for +: 'int' and 'str'",), <traceback object at 0x10c890ef0>)
+Traceback (most recent call last):
+  File "/Users/zhang/Desktop/test/other_test.py", line 180, in <module>
+    a = 1 + '1'
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2019-08-22 14:07:50,420 - INFO - 
+
+
+2019-08-22 14:37:46,648 - INFO - ======ERROR:unsupported operand type(s) for -: 'datetime.datetime' and 'float'
+2019-08-22 14:37:46,649 - ERROR - (<type 'exceptions.TypeError'>, TypeError("unsupported operand type(s) for -: 'datetime.datetime' and 'float'",), <traceback object at 0x1053b9098>)
+Traceback (most recent call last):
+  File "/Users/zhang/Desktop/test/other_test.py", line 181, in get_time
+    time3 = time2 -time1
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'float'
+2019-08-22 14:37:46,649 - INFO - 
+
+
+2019-08-22 14:39:44,059 - INFO - ======ERROR:cannot concatenate 'str' and 'datetime.timedelta' objects
+2019-08-22 14:39:44,059 - ERROR - (<type 'exceptions.TypeError'>, TypeError("cannot concatenate 'str' and 'datetime.timedelta' objects",), <traceback object at 0x10362b098>)
+Traceback (most recent call last):
+  File "/Users/zhang/Desktop/test/other_test.py", line 193, in read_time
+    print 'time1-time2= ' + times
+TypeError: cannot concatenate 'str' and 'datetime.timedelta' objects
+2019-08-22 14:39:44,060 - INFO - 
+
+
