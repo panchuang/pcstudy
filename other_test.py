@@ -146,59 +146,70 @@ import time
 # b = list(set(a))
 # print b
 
-import os,sys
-import logging
-import time,datetime
+# import os,sys
+# import logging
+# import time,datetime
+#
+# class Config():
+#     def __init__(self):
+#         file_path = os.path.dirname(os.path.abspath(__file__))
+#         self.logger = logging.getLogger('testLog')
+#         self.logger.setLevel(logging.DEBUG)
+#
+#         fh = logging.FileHandler(file_path + '/Log.log')
+#         fh.setLevel(logging.DEBUG)
+#
+#         ch = logging.StreamHandler()
+#         ch.setLevel(logging.DEBUG)
+#
+#         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+#         fh.setFormatter(formatter)
+#         ch.setFormatter(formatter)
+#
+#         self.logger.addHandler(fh)
+#         self.logger.addHandler(ch)
+#
+#     def getLog(self):
+#         return self.logger
+#
+#
+# def get_time():
+#     try:
+#         time1 = datetime.datetime.today()
+#         time.sleep(1)
+#         time2 = datetime.datetime.today()
+#         time3 = time2 -time1
+#         read_time(time3)
+#     except Exception as e:
+#         time3 = ''
+#         logger.info('='*6 + 'ERROR:' + str(e))
+#         logger.exception(sys.exc_info())
+#         logger.info('\n\n')
+#     return time3
+#
+# def read_time(times):
+#     try:
+#         print type(times)
+#         print 'time1-time2= ' + times
+#     except Exception as e:
+#         logger.info('='*6 + 'ERROR:' + str(e))
+#         logger.exception(sys.exc_info())
+#         logger.info('\n\n')
+#
+# if __name__ == "__main__":
+#     conf = Config()
+#     logger = conf.getLog()
+#
+#     times = get_time()
+#     print times
 
-class Config():
-    def __init__(self):
-        file_path = os.path.dirname(os.path.abspath(__file__))
-        self.logger = logging.getLogger('testLog')
-        self.logger.setLevel(logging.DEBUG)
 
-        fh = logging.FileHandler(file_path + '/Log.log')
-        fh.setLevel(logging.DEBUG)
+class Parent():
+    def __init__(self,name):
+        print 'name:',name
 
-        ch = logging.StreamHandler()
-        ch.setLevel(logging.DEBUG)
+class Child(Parent):
+    def __init__(self,name):
+        super.__init__(name)
 
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        fh.setFormatter(formatter)
-        ch.setFormatter(formatter)
-
-        self.logger.addHandler(fh)
-        self.logger.addHandler(ch)
-
-    def getLog(self):
-        return self.logger
-
-
-def get_time():
-    try:
-        time1 = datetime.datetime.today()
-        time.sleep(1)
-        time2 = datetime.datetime.today()
-        time3 = time2 -time1
-        read_time(time3)
-    except Exception as e:
-        time3 = ''
-        logger.info('='*6 + 'ERROR:' + str(e))
-        logger.exception(sys.exc_info())
-        logger.info('\n\n')
-    return time3
-
-def read_time(times):
-    try:
-        print type(times)
-        print 'time1-time2= ' + times
-    except Exception as e:
-        logger.info('='*6 + 'ERROR:' + str(e))
-        logger.exception(sys.exc_info())
-        logger.info('\n\n')
-
-if __name__ == "__main__":
-    conf = Config()
-    logger = conf.getLog()
-
-    times = get_time()
-    print times
+Child('panchuang')
